@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="733.0" prefWidth="985.0" stylesheets="@styleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rcm.user.CustomerSearchController">
+    <children>
+        <AnchorPane id="AnchorpaneofSign" layoutX="30.0" layoutY="157.0" prefHeight="525.0" prefWidth="933.0" stylesheets="@styleSheet.css">
+            <children>
+                <AnchorPane layoutX="60.0" layoutY="-27.0" prefHeight="54.0" prefWidth="437.0" style="-fx-background-color: fff;">
+                    <children>
+                        <Label layoutX="54.0" layoutY="8.0" text="SEARCH FOR RESIDENTAL COMPLEX">
+                            <font>
+                                <Font name="Agency FB Bold" size="31.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </AnchorPane>
+                <Circle fill="WHITE" layoutX="67.0" radius="44.0" stroke="TRANSPARENT" strokeType="OUTSIDE">
+                    <effect>
+                        <DropShadow color="#00000079" />
+                    </effect>
+                </Circle>
+                <ImageView fitHeight="54.0" fitWidth="58.0" layoutX="38.0" layoutY="-28.0">
+                    <image>
+                        <Image url="@../images/rent_50px.png" />
+                    </image>
+                </ImageView>
+                <TextField id="textFiled" fx:id="textSearch" alignment="CENTER" layoutX="601.0" layoutY="31.0" promptText="ENTER YOUR CITY" stylesheets="@styleSheet.css" />
+                <Button id="buttonofSignin" layoutX="805.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#SearchContract" stylesheets="@styleSheet.css" text="SEARCH">
+                    <font>
+                        <Font name="Agency FB Bold" size="16.0" />
+                    </font>
+                </Button>
+                <TableView fx:id="ApartmentTable" layoutX="55.0" layoutY="79.0" prefHeight="418.0" prefWidth="824.0" styleClass="table" stylesheets="@styleSheet.css">
+                    <columns>
+                        <TableColumn id="tablbackground" fx:id="col_ApaId" prefWidth="113.0" text="Apartment Id" />
+                        <TableColumn id="tablbackground" fx:id="col_ApaType" prefWidth="102.0" text=" Type" />
+                        <TableColumn id="tablbackground" fx:id="col_ApaRoomNum" prefWidth="106.0" text=" Room Num" />
+                        <TableColumn id="tablbackground" fx:id="col_ApaDescription" minWidth="0.0" prefWidth="296.0" text=" Description" />
+                        <TableColumn id="tablbackground" fx:id="co_ApaPricePerY" minWidth="1.0" prefWidth="108.0" text=" PricePerY" />
+                        <TableColumn id="tablbackground" fx:id="col_ApaBuilding_FK" prefWidth="98.0" text="Building Id" />
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+        <ImageView layoutX="65.0" layoutY="34.0" onMouseClicked="#backHome">
+            <image>
+                <Image url="@../images/back_to_50px.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="97.0" fitWidth="101.0" layoutX="862.0" layoutY="34.0">
+            <image>
+                <Image url="@../images/RCM_loge_white.png" />
+            </image>
+        </ImageView>
+        <Button id="buttonofSignin" layoutX="431.0" layoutY="687.0" mnemonicParsing="false" onAction="#bookRoom" prefHeight="32.0" prefWidth="131.0" stylesheets="@styleSheet.css" text="BOOK A ROOM">
+            <font>
+                <Font name="Agency FB Bold" size="16.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

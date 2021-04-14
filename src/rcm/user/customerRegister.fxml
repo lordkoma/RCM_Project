@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="736.0" prefWidth="568.0" stylesheets="@styleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rcm.user.CustomerRegisterController">
+   <children>
+      <ImageView fitHeight="107.0" fitWidth="106.0" layoutX="448.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/RCM_loge_white.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="52.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#backLogin" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/back_to_50px.png" />
+         </image>
+      </ImageView>
+      <AnchorPane id="AnchorpaneofSign" layoutX="131.0" layoutY="150.0" prefHeight="409.0" prefWidth="306.0" stylesheets="@styleSheet.css">
+         <children>
+            <TextField id="textFiled" fx:id="txtname" alignment="CENTER" layoutX="65.0" layoutY="70.0" prefHeight="31.0" prefWidth="176.0" promptText="FULL NAME" stylesheets="@styleSheet.css">
+               <font>
+                  <Font name="Agency FB" size="19.0" />
+               </font>
+            </TextField>
+            <TextField id="textFiled" fx:id="txtemail" alignment="CENTER" layoutX="66.0" layoutY="125.0" prefHeight="31.0" prefWidth="176.0" promptText="E-MAIL" stylesheets="@styleSheet.css">
+               <font>
+                  <Font name="Agency FB Bold" size="19.0" />
+               </font>
+            </TextField>
+            <TextField id="textFiled" fx:id="txtphone" alignment="CENTER" layoutX="66.0" layoutY="182.0" prefHeight="31.0" prefWidth="176.0" promptText="PHONE NUMBER" stylesheets="@styleSheet.css">
+               <font>
+                  <Font name="Agency FB" size="19.0" />
+               </font>
+            </TextField>
+            <PasswordField id="textFiled" fx:id="txtpass" alignment="CENTER" layoutX="65.0" layoutY="303.0" prefHeight="31.0" prefWidth="176.0" promptText="PASSWORD" stylesheets="@styleSheet.css">
+               <font>
+                  <Font name="Agency FB" size="19.0" />
+               </font>
+            </PasswordField>
+            <PasswordField id="textFiled" fx:id="txtpassconf" alignment="CENTER" layoutX="65.0" layoutY="358.0" prefHeight="31.0" prefWidth="176.0" promptText="CONFIRM PASSWORD" stylesheets="@styleSheet.css">
+               <font>
+                  <Font name="Agency FB" size="19.0" />
+               </font>
+            </PasswordField>
+            <Circle fill="WHITE" layoutX="153.0" layoutY="6.0" radius="44.0" stroke="BLACK" strokeType="INSIDE" />
+            <ImageView fitHeight="95.0" fitWidth="95.0" layoutX="106.0" layoutY="-47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_user_64px_1.png" />
+               </image>
+            </ImageView>
+            <TextField id="textFiled" fx:id="id" alignment="CENTER" layoutX="66.0" layoutY="240.0" prefHeight="31.0" prefWidth="176.0" promptText="NATIONAL ID NUMBER" stylesheets="@styleSheet.css">
+               <font>
+                  <Font name="Agency FB" size="19.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <Label layoutX="162.0" layoutY="63.0" text="CUSTOMER SIGNUP" textFill="WHITE">
+         <font>
+            <Font name="Agency FB Bold" size="38.0" />
+         </font>
+      </Label>
+      <Button id="buttonofSignin" layoutX="198.0" layoutY="682.0" mnemonicParsing="false" onAction="#signup" prefHeight="31.0" prefWidth="176.0" stylesheets="@styleSheet.css" text="SIGNUP">
+         <font>
+            <Font name="Agency FB Bold" size="21.0" />
+         </font>
+      </Button>
+      <Label layoutX="131.0" layoutY="613.0" text="Aleady has an account?" textFill="WHITE" />
+      <Hyperlink layoutX="131.0" layoutY="634.0" onMouseClicked="#backLogin" text="Click here to login" />
+      <Label fx:id="lblerr" layoutX="162.0" layoutY="575.0" prefHeight="21.0" prefWidth="244.0" textFill="RED" />
+      <Label fx:id="lblsec" layoutX="164.0" layoutY="575.0" prefHeight="21.0" prefWidth="244.0" textFill="#00ae3a" />
+   </children>
+</AnchorPane>

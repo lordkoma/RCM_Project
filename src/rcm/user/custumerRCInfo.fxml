@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="733.0" prefWidth="985.0" stylesheets="@styleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rcm.user.CustumerRCInfoController">
+   <children>
+      <AnchorPane id="AnchorpaneofSign" layoutX="260.0" layoutY="184.0" prefHeight="365.0" prefWidth="495.0" stylesheets="@styleSheet.css">
+         <children>
+            <AnchorPane layoutX="60.0" layoutY="-27.0" prefHeight="54.0" prefWidth="246.0" style="-fx-background-color: fff;">
+               <children>
+                  <Label layoutX="60.0" layoutY="8.0" prefHeight="38.0" prefWidth="306.0" text="BOOK RESIDENTAL COMPLEX">
+                     <font>
+                        <Font name="Agency FB Bold" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <Circle fill="WHITE" layoutX="67.0" radius="44.0" stroke="TRANSPARENT" strokeType="OUTSIDE">
+               <effect>
+                  <DropShadow color="#00000079" />
+               </effect>
+            </Circle>
+            <ImageView fitHeight="54.0" fitWidth="58.0" layoutX="38.0" layoutY="-28.0">
+               <image>
+                  <Image url="@../images/file_invoice_dollar_50px.png" />
+               </image>
+            </ImageView>
+            <TextField id="textFiled" fx:id="textApartemId" alignment="CENTER" layoutX="160.0" layoutY="113.0" prefHeight="31.0" prefWidth="176.0" promptText="APARTMENT ID" stylesheets="@styleSheet.css">
+               <font>
+                  <Font name="Agency FB" size="19.0" />
+               </font>
+            </TextField>
+            <TextField id="textFiled" fx:id="textEndDate" alignment="CENTER" layoutX="160.0" layoutY="266.0" prefHeight="31.0" prefWidth="176.0" promptText="END DATE" stylesheets="@styleSheet.css">
+               <font>
+                  <Font name="Agency FB" size="19.0" />
+               </font>
+            </TextField>
+            <TextField id="textFiled" fx:id="textStartDat" alignment="CENTER" layoutX="160.0" layoutY="191.0" prefHeight="31.0" prefWidth="176.0" promptText="START DATE" stylesheets="@styleSheet.css">
+               <font>
+                  <Font name="Agency FB" size="19.0" />
+               </font>
+            </TextField>
+            <Label fx:id="lblerr" alignment="CENTER" layoutX="137.0" layoutY="330.0" prefHeight="21.0" prefWidth="243.0" textFill="RED" />
+            <Label fx:id="lblsec" alignment="CENTER" layoutX="137.0" layoutY="330.0" prefHeight="21.0" prefWidth="243.0" textFill="#008d26" />
+         </children>
+      </AnchorPane>
+      <ImageView layoutX="75.0" layoutY="44.0" onMouseClicked="#backSearch">
+         <image>
+            <Image url="@../images/back_to_50px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="97.0" fitWidth="101.0" layoutX="872.0" layoutY="44.0">
+         <image>
+            <Image url="@../images/RCM_loge_white.png" />
+         </image>
+      </ImageView>
+      <Button id="buttonofSignin" layoutX="416.0" layoutY="645.0" mnemonicParsing="false" onMouseClicked="#AddCountret" prefHeight="32.0" prefWidth="154.0" stylesheets="@styleSheet.css" text="MAKE PAYMENT">
+         <font>
+            <Font name="Agency FB Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

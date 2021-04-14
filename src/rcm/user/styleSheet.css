@@ -1,0 +1,78 @@
+#AnchorpaneofSign{
+    -fx-background-color: rgba(141, 147, 171,0.3);
+}
+#AnchorPane{
+    -fx-background-color: #393b44;
+}
+#AnchorpaneofAttend{
+    -fx-background-color: rgba(141, 147, 171,0.3);
+
+}
+#AnchorpaneofRCM{
+    -fx-background-color:rgba(246,246,246,0.4);
+}
+
+#AnchorpaneofRCM:hover{
+    -fx-background-color: #393b44;
+    -fx-transform: scale(1.05);
+    -fx-box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+#textFiled{
+    -fx-background-color: #f1f3f8;
+    -fx-background-radius: 5em;
+    -fx-border-radius: 5em;
+    /*    -fx-background-color: transparent;
+        -fx-border-color:#ffffff;
+        -fx-border-width:0px 0px 2px 0px;*/
+}
+
+#buttonofSignin{
+    -fx-background-color: #f1f3f8;
+    -fx-background-radius: 5em;
+    -fx-border-radius: 5em;
+
+}
+#buttonofSignin:hover{
+    -fx-background-color: rgba(141, 147, 171,0.3);
+    -fx-text-fill: #f1f3f8;
+    -fx-background-radius: 5em;
+    -fx-border-radius: 5em;
+}
+#buttonsofHome{
+    -fx-background-color: #f1f3f8;
+    -fx-background-radius: 5em;
+    -fx-border-radius: 5em;
+}
+#buttonsofHome:hover{
+    -fx-background-color: #393b44;
+    -fx-text-fill: #f1f3f8;
+    -fx-background-radius: 5em;
+    -fx-border-radius: 5em;
+}
+#buttonsofHomeLogout{
+    -fx-background-color: #f05454;
+    -fx-background-radius: 5em;
+    -fx-border-radius: 5em;
+}
+#buttonsofHomeLogout:hover{
+    -fx-background-color: #af2d2d;
+    -fx-text-fill: #f1f3f8;
+    -fx-background-radius: 5em;
+    -fx-border-radius: 5em;
+}
+#buttonsofAttend{
+    -fx-background-color: #f1f3f8;
+    -fx-background-radius: 5em;
+    -fx-border-radius: 5em;
+}
+#buttonsofAttend:hover{
+    -fx-background-color: #bedbbb;
+    -fx-text-fill: #393b44;
+    -fx-background-radius: 5em;
+    -fx-border-radius: 5em;
+}
+.table .column-header-background .nested-column-header .table-column, .table .column-header-background .filler {     
+    -fx-background-color:  #6CABCD;
+    -fx-border-color:  #1B4F72;
+}
