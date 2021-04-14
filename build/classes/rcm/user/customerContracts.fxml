@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="733.0" prefWidth="985.0" stylesheets="@styleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rcm.user.CustomerContractsController">
+   <children>
+      <AnchorPane id="AnchorpaneofSign" layoutX="55.0" layoutY="196.0" prefHeight="489.0" prefWidth="898.0" stylesheets="@styleSheet.css">
+         <children>
+            <AnchorPane layoutX="60.0" layoutY="-27.0" prefHeight="54.0" prefWidth="275.0" style="-fx-background-color: fff;">
+               <children>
+                  <Label layoutX="74.0" layoutY="8.0" text="MY CONTRACTS">
+                     <font>
+                        <Font name="Agency FB Bold" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <Circle fill="WHITE" layoutX="67.0" radius="44.0" stroke="TRANSPARENT" strokeType="OUTSIDE">
+               <effect>
+                  <DropShadow color="#00000079" />
+               </effect>
+            </Circle>
+            <ImageView fitHeight="54.0" fitWidth="58.0" layoutX="38.0" layoutY="-28.0">
+               <image>
+                  <Image url="@../images/handshake_50px.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="ContractTable" layoutX="51.0" layoutY="56.0" prefHeight="405.0" prefWidth="796.0" styleClass="table" stylesheets="@styleSheet.css">
+                 <columns>
+                  <TableColumn id="tablbackground" fx:id="col_ContractNum" prefWidth="112.0" text="Contract Number" />
+                  <TableColumn id="tablbackground" fx:id="col_StartDate" prefWidth="128.0" text="Start Date" />
+                  <TableColumn id="tablbackground" fx:id="col_EndDate" prefWidth="136.0" text="End Date" />
+                  <TableColumn id="tablbackground" fx:id="coll_ApartmentNum" minWidth="0.0" prefWidth="137.0" text="Apartment Number " />
+                  <TableColumn id="tablbackground" fx:id="col_CustomerName" minWidth="0.0" prefWidth="282.0" text="Cutomer Name" />
+               </columns>
+            </TableView>
+            <TextField id="textFiled" fx:id="textSearch" alignment="CENTER" layoutX="579.0" layoutY="10.0" promptText="SEARCH" stylesheets="@styleSheet.css" />
+            <Button id="buttonofSignin" layoutX="781.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#SearchContract" stylesheets="@styleSheet.css" text="SEARCH">
+               <font>
+                  <Font name="Agency FB Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ImageView layoutX="55.0" layoutY="24.0" onMouseClicked="#backHome">
+         <image>
+            <Image url="@../images/back_to_50px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="97.0" fitWidth="101.0" layoutX="852.0" layoutY="24.0">
+         <image>
+            <Image url="@../images/RCM_loge_white.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
