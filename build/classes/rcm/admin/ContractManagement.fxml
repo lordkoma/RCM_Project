@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="733.0" prefWidth="985.0" stylesheets="@stayl.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rcm.admin.ContractManagementController">
+   <children>
+      <AnchorPane id="AnchorpaneofSign" layoutX="29.0" layoutY="125.0" prefHeight="537.0" prefWidth="928.0" stylesheets="@stayl.css">
+         <children>
+            <AnchorPane layoutX="60.0" layoutY="-27.0" prefHeight="54.0" prefWidth="311.0" style="-fx-background-color: fff;">
+               <children>
+                  <Label layoutX="74.0" layoutY="8.0" text="CONTRACTS MANAGEMENT">
+                     <font>
+                        <Font name="Agency FB Bold" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <Circle fill="WHITE" layoutX="67.0" radius="44.0" stroke="TRANSPARENT" strokeType="OUTSIDE">
+               <effect>
+                  <DropShadow color="#00000079" />
+               </effect>
+            </Circle>
+            <ImageView fitHeight="54.0" fitWidth="58.0" layoutX="38.0" layoutY="-28.0">
+               <image>
+                  <Image url="@../imgs/contract_50px.png" />
+               </image>
+            </ImageView>
+            <Button id="buttonsofHome" layoutX="426.0" layoutY="484.0" mnemonicParsing="false" onAction="#buttUP" prefHeight="39.0" prefWidth="77.0" stylesheets="@stayl.css" text="Update">
+               <font>
+                  <Font name="Agency FB Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button id="buttonsofHome" layoutX="637.0" layoutY="484.0" mnemonicParsing="false" onAction="#buttDlete" prefHeight="39.0" prefWidth="77.0" stylesheets="@stayl.css" text="Delete">
+               <font>
+                  <Font name="Agency FB Bold" size="18.0" />
+               </font>
+            </Button>
+            <TableView fx:id="ContractTable" layoutX="67.0" layoutY="66.0" onMousePressed="#onMP" prefHeight="405.0" prefWidth="796.0" stylesheets="@stayl.css">
+               <columns>
+                  <TableColumn id="tablbackground" fx:id="col_ContractNum" prefWidth="144.0" text="Contract Number" />
+                  <TableColumn id="tablbackground" fx:id="col_StartDate" prefWidth="117.0" text="Start Date" />
+                  <TableColumn id="tablbackground" fx:id="col_EndDate" prefWidth="125.0" text="End Date" />
+                  <TableColumn id="tablbackground" fx:id="coll_ApartmentNum" minWidth="0.0" prefWidth="178.0" text="Apartment Number " />
+                  <TableColumn id="tablbackground" fx:id="col_CustomerName" minWidth="0.0" prefWidth="231.0" text="Cutomer Name" />
+               </columns>
+            </TableView>
+            <TextField fx:id="textSearch" layoutX="617.0" layoutY="26.0" prefHeight="25.0" prefWidth="161.0" promptText="Search..." />
+            <Button id="Search" layoutX="795.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#SearchContract" prefHeight="31.0" prefWidth="68.0" stylesheets="@stayl.css" text="Search" />
+            <Button id="buttonsofHome" layoutX="222.0" layoutY="484.0" mnemonicParsing="false" onAction="#buttClean" prefHeight="39.0" prefWidth="77.0" stylesheets="@stayl.css" text="Clean">
+               <font>
+                  <Font name="Agency FB Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ImageView layoutX="45.0" layoutY="14.0" onMouseClicked="#buttback">
+         <image>
+            <Image url="@../imgs/back_to_50px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="97.0" fitWidth="101.0" layoutX="842.0" layoutY="14.0">
+         <image>
+            <Image url="@../imgs/RCM_loge_white.png" />
+         </image>
+      </ImageView>
+      <Button id="buttonsofHome" layoutX="745.0" layoutY="680.0" mnemonicParsing="false" onAction="#buttAdd" prefHeight="39.0" prefWidth="125.0" stylesheets="@stayl.css" text="Add ">
+         <font>
+            <Font name="Agency FB Bold" size="18.0" />
+         </font>
+      </Button>
+      <TextField id="textFiled" fx:id="txtSd" alignment="CENTER" layoutX="120.0" layoutY="680.0" prefHeight="38.0" prefWidth="149.0" promptText="StartDate " stylesheets="@stayl.css">
+         <font>
+            <Font name="Agency FB Bold" size="19.0" />
+         </font>
+      </TextField>
+      <TextField id="textFiled" fx:id="txtApaId" alignment="CENTER" layoutX="426.0" layoutY="680.0" prefHeight="38.0" prefWidth="134.0" promptText="Apartment ID" stylesheets="@stayl.css">
+         <font>
+            <Font name="Agency FB Bold" size="19.0" />
+         </font>
+      </TextField>
+      <TextField id="textFiled" fx:id="txtEd" alignment="CENTER" layoutX="278.0" layoutY="680.0" prefHeight="38.0" prefWidth="134.0" promptText="End Date" stylesheets="@stayl.css">
+         <font>
+            <Font name="Agency FB Bold" size="19.0" />
+         </font>
+      </TextField>
+      <TextField id="textFiled" fx:id="txtUid" alignment="CENTER" layoutX="569.0" layoutY="680.0" prefHeight="38.0" prefWidth="134.0" promptText="User ID" stylesheets="@stayl.css">
+         <font>
+            <Font name="Agency FB Bold" size="19.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

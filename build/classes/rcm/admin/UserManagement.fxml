@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="733.0" prefWidth="985.0" stylesheets="@stayl.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rcm.admin.UserManagementController">
+   <children>
+      <AnchorPane id="AnchorpaneofSign" layoutX="29.0" layoutY="131.0" prefHeight="524.0" prefWidth="927.0" stylesheets="@stayl.css">
+         <children>
+            <AnchorPane layoutX="60.0" layoutY="-27.0" prefHeight="54.0" prefWidth="326.0" style="-fx-background-color: fff;">
+               <children>
+                  <Label layoutX="74.0" layoutY="8.0" prefHeight="38.0" prefWidth="241.0" text="USER MANAAEMENT">
+                     <font>
+                        <Font name="Agency FB Bold" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <Circle fill="WHITE" layoutX="67.0" radius="44.0" stroke="TRANSPARENT" strokeType="OUTSIDE">
+               <effect>
+                  <DropShadow color="#00000079" />
+               </effect>
+            </Circle>
+            <ImageView fitHeight="54.0" fitWidth="58.0" layoutX="38.0" layoutY="-28.0">
+               <image>
+                  <Image url="@../imgs/managementpx.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="UserTable" layoutX="46.0" layoutY="62.0" onMousePressed="#userTablemouseP" prefHeight="405.0" prefWidth="796.0" stylesheets="@stayl.css">
+              <columns>
+                <TableColumn id="tablbackground" fx:id="col_UserId" prefWidth="112.0" text="User ID  " />
+                <TableColumn id="tablbackground" fx:id="col_Username" prefWidth="121.0" text="User Name" />
+                  <TableColumn id="tablbackground" fx:id="col_PhoneNo" prefWidth="125.0" text="Phone number " />
+                  <TableColumn id="tablbackground" fx:id="col_Email" minWidth="0.0" prefWidth="166.0" text="Email Address" />
+                  <TableColumn id="tablbackground" fx:id="col_userPassword" prefWidth="135.0" text="User Password" />
+                  <TableColumn id="tablbackground" fx:id="col_UserType" prefWidth="136.0" text="User Type" />
+              </columns>
+            </TableView>
+            <TextField fx:id="textSearch" layoutX="645.0" layoutY="14.0" onKeyReleased="#SearchUserKey" prefHeight="31.0" prefWidth="198.0" promptText="enter an id to search" />
+            <Button id="buttonsofHome" layoutX="242.0" layoutY="474.0" mnemonicParsing="false" onAction="#buttUP" prefHeight="39.0" prefWidth="77.0" stylesheets="@stayl.css" text="Update">
+               <font>
+                  <Font name="Agency FB Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button id="buttonsofHome" layoutX="425.0" layoutY="474.0" mnemonicParsing="false" onAction="#buttDelet" prefHeight="39.0" prefWidth="77.0" stylesheets="@stayl.css" text="Delete">
+               <font>
+                  <Font name="Agency FB Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button id="buttonsofHome" layoutX="614.0" layoutY="474.0" mnemonicParsing="false" onAction="#buttClean" prefHeight="39.0" prefWidth="77.0" stylesheets="@stayl.css" text="Clean">
+               <font>
+                  <Font name="Agency FB Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ImageView layoutX="45.0" layoutY="14.0" onMouseClicked="#buttback">
+         <image>
+            <Image url="@../imgs/back_to_50px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="97.0" fitWidth="101.0" layoutX="842.0" layoutY="14.0">
+         <image>
+            <Image url="@../imgs/RCM_loge_white.png" />
+         </image>
+      </ImageView>
+      <TextField id="textFiled" fx:id="txtID" alignment="CENTER" layoutX="84.0" layoutY="676.0" prefHeight="38.0" prefWidth="101.0" promptText="ID" stylesheets="@stayl.css">
+         <font>
+            <Font name="Agency FB Bold" size="19.0" />
+         </font>
+      </TextField>
+      <TextField id="textFiled" fx:id="txtN" alignment="CENTER" layoutX="197.0" layoutY="676.0" prefHeight="38.0" prefWidth="134.0" promptText="Name" stylesheets="@stayl.css">
+         <font>
+            <Font name="Agency FB Bold" size="19.0" />
+         </font>
+      </TextField>
+      <TextField id="textFiled" fx:id="txtP" alignment="CENTER" layoutX="344.0" layoutY="676.0" prefHeight="38.0" prefWidth="149.0" promptText="Phone" stylesheets="@stayl.css">
+         <font>
+            <Font name="Agency FB Bold" size="19.0" />
+         </font>
+      </TextField>
+      <TextField id="textFiled" fx:id="txtEmail" alignment="CENTER" layoutX="503.0" layoutY="676.0" prefHeight="38.0" prefWidth="134.0" promptText="Email" stylesheets="@stayl.css">
+         <font>
+            <Font name="Agency FB Bold" size="19.0" />
+         </font>
+      </TextField>
+      <TextField id="textFiled" fx:id="txtPassword" alignment="CENTER" layoutX="653.0" layoutY="676.0" prefHeight="38.0" prefWidth="134.0" promptText="Password" stylesheets="@stayl.css">
+         <font>
+            <Font name="Agency FB Bold" size="19.0" />
+         </font>
+      </TextField>
+      <Button id="buttonsofHome" layoutX="864.0" layoutY="674.0" mnemonicParsing="false" onAction="#buttAdd" prefHeight="39.0" prefWidth="90.0" stylesheets="@stayl.css" text="Add User">
+         <font>
+            <Font name="Agency FB Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
